@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.Rødhætte.iml
+# Datasource local storage ignored files
+/../../../../../../../:\Unity\Projects\Rødhætte\.idea\.idea.Rødhætte\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

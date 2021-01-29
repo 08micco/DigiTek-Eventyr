@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\08mik\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\08mik\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="D:\Unity\Projects\Rødhætte" t="IncludeRecursive">
+      <e p="Assets" t="Include">
+        <e p="Navmesh" t="Include">
+          <e p="NavMeshComponents" t="Include">
+            <e p="Assets" t="Include">
+              <e p="Tests" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="NavMeshComponentsTestsEditmode.asmdef" t="Include" />
+                  <e p="NavMeshModifierVolumeInPrefabTests.cs" t="Include" />
+                  <e p="NavMeshSurfaceInPrefabTests.cs" t="Include" />
+                  <e p="NavMeshSurfaceInPrefabVariantTests.cs" t="Include" />
+                  <e p="PrefabSavingUtil.cs" t="Include" />
+                  <e p="PrefabStageAutoSavingUtil.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="NavMeshComponentsTestsEditmode.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
