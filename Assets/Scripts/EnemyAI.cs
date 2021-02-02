@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -9,6 +10,12 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
 
     public LayerMask whatIsGround, whatIsPlayer;
+
+    private const int WalkSpeed = 3;
+    private const int RunSpeed = 6;
+
+    public bool isRunning;
+    private Animator wolfAnimator;
 
     // Patrolling
     public Vector3 walkPoint;
@@ -23,6 +30,7 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        wolfAnimator = gameObject.GetComponent<Animator>();
     }
 
     private void Update()
@@ -32,10 +40,15 @@ public class EnemyAI : MonoBehaviour
 
         if (!playerInSightRange) Patrolling();
         if (playerInSightRange) ChasePlayer();
+        print(wolfAnimator.GetBool("isRunning"));
     }
 
     private void Patrolling()
     {
+        agent.speed = WalkSpeed;
+        isRunning = false;
+        wolfAnimator.SetBool("isRunning", isRunning);
+        // wolfAnimator.Play();
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet) agent.SetDestination((walkPoint));
@@ -58,8 +71,11 @@ public class EnemyAI : MonoBehaviour
     
     private void ChasePlayer()
     {
-        if(playerInAttackRange) Destroy(gameObject);
+        agent.speed = RunSpeed;
+        isRunning = true;
+        wolfAnimator.SetBool("isRunning", isRunning);
+        if(playerInAttackRange)/*KILL*/throw new NotImplementedException();;
         agent.SetDestination(player.position);
-        transform.LookAt(player);    
-    }
+        //transform.LookAt(player);    
+    }   
 }
