@@ -18,6 +18,7 @@ public class Equipment : MonoBehaviour
     private Animator animFlower;
     
     public Inventory inventory;
+    public AudioSource equipSound;
     
     // Lantern: 1, Basket: 2
     void Start()
@@ -55,6 +56,7 @@ public class Equipment : MonoBehaviour
             RenderSettings.fogDensity = 0.3f; // 4
             lantern.SetActive(true);
             isEquipped = true;
+            equipSound.Play();
             animLantern.Play("Lantern_Draw");
             if (currentlyEquipped == 1)
             {
@@ -74,6 +76,7 @@ public class Equipment : MonoBehaviour
             if (!inventory.HasObject("Basket")) return;
             basket.SetActive(true);
             isEquipped = true;
+            equipSound.Play();
             animBasket.Play("Basket_Draw");
             if (currentlyEquipped == 2)
             {
@@ -92,6 +95,7 @@ public class Equipment : MonoBehaviour
             if (!inventory.HasObject("Apple")) return;
             apple.SetActive(true);
             isEquipped = true;
+            equipSound.Play();
             //animApple.Play("Apple_Draw");
             if (currentlyEquipped == 3)
             {
@@ -110,6 +114,7 @@ public class Equipment : MonoBehaviour
             if (!inventory.HasObject("Flower")) return;
             flower.SetActive(true);
             isEquipped = true;
+            equipSound.Play();
             //animFlower.Play("Flower_Draw");
             if (currentlyEquipped == 4)
             {

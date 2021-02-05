@@ -5,6 +5,7 @@ public class Interact : MonoBehaviour
     public Camera playerCamera;
     public Inventory inventory;
     private int pickupRange = 3;
+    public AudioSource equipSound;
     void Update()
     {
         RaycastHit hitInfo; // Holder information om det gameobject vi rammer
@@ -23,6 +24,7 @@ public class Interact : MonoBehaviour
                 {
                     Destroy(hitInfo.collider.gameObject);
                     inventory.AddToInventory("Apple");
+                    equipSound.Play();
                 }
                 
             }
@@ -34,6 +36,7 @@ public class Interact : MonoBehaviour
                 {
                     Destroy(hitInfo.collider.gameObject);
                     inventory.AddToInventory("Flower");
+                    equipSound.Play();
                 }
             }
             else if (hitInfo.transform.CompareTag("Lantern") && hitInfo.distance <= pickupRange)
@@ -44,6 +47,7 @@ public class Interact : MonoBehaviour
                 {
                     Destroy(hitInfo.collider.gameObject);
                     inventory.AddToInventory("Lantern");
+                    equipSound.Play();
                 }
                 
             }
@@ -55,6 +59,7 @@ public class Interact : MonoBehaviour
                 {
                     Destroy(hitInfo.collider.gameObject);
                     inventory.AddToInventory("Basket");
+                    equipSound.Play();
                 }
             }
 
