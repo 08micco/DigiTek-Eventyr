@@ -1849,6 +1849,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 287828243801488293, guid: 06206e8a682348a4eb67bafd55a72851, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 953e0020eeffb8241942f76a6b219c4b, type: 2}
     - target: {fileID: 2413825626434158570, guid: 06206e8a682348a4eb67bafd55a72851, type: 3}
       propertyPath: m_Name
       value: Stamme Variant
@@ -1897,6 +1901,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5457960029656146540, guid: 06206e8a682348a4eb67bafd55a72851, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ee73c3a3c4c5e146a94b461d086aa6e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06206e8a682348a4eb67bafd55a72851, type: 3}
 --- !u!1001 &732112473
@@ -3423,6 +3431,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedRidingHouseV2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4626285405060727724, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b5f82cb2e374b3948b0a6a13f118e996, type: 2}
+    - target: {fileID: 7804382975635186942, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1c0eb7817074e44e9a6e5187309a13f, type: 2}
+    - target: {fileID: 8831169865302320973, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831169865302320973, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831169865302320973, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831169865302320973, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831169865302320973, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831169865302320973, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
 --- !u!1001 &1559007207
@@ -4866,6 +4906,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedRidingHouseV2
       objectReference: {fileID: 0}
+    - target: {fileID: 4626285405060727724, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b5f82cb2e374b3948b0a6a13f118e996, type: 2}
+    - target: {fileID: 7804382975635186942, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1c0eb7817074e44e9a6e5187309a13f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27646284f79bff54386f1f7052437fa7, type: 3}
 --- !u!1001 &2598317404856000882
@@ -4940,6 +4988,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 287828243801488293, guid: 06206e8a682348a4eb67bafd55a72851, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ee73c3a3c4c5e146a94b461d086aa6e, type: 2}
     - target: {fileID: 2413825626434158570, guid: 06206e8a682348a4eb67bafd55a72851, type: 3}
       propertyPath: m_Name
       value: Stamme
@@ -4988,6 +5040,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5457960029656146540, guid: 06206e8a682348a4eb67bafd55a72851, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ee73c3a3c4c5e146a94b461d086aa6e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06206e8a682348a4eb67bafd55a72851, type: 3}
 --- !u!1001 &3499309011619819474
