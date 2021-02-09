@@ -53,7 +53,7 @@ public class Equipment : MonoBehaviour
         {
             HideItems();
             if (!inventory.HasObject("Lanterne")) return;
-            RenderSettings.fogDensity = 0.3f; // 4
+            RenderSettings.fogDensity = 0.2f; // 4
             lantern.SetActive(true);
             isEquipped = true;
             equipSound.Play();
