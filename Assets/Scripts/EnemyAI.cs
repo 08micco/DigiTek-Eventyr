@@ -9,6 +9,8 @@ public class EnemyAI : MonoBehaviour
 
     public Transform player;
 
+    private GameObject playerObj;
+    
     public LayerMask whatIsGround, whatIsPlayer;
 
     private const int WalkSpeed = 3;
@@ -28,15 +30,18 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        playerObj = GameObject.Find("Player");
+        player = playerObj.transform;
         agent = GetComponent<NavMeshAgent>();
         wolfAnimator = gameObject.GetComponent<Animator>();
+        
     }
 
     private void Update()
     {
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        
 
         if (!playerInSightRange) Patrolling();
         if (playerInSightRange) ChasePlayer();
@@ -48,7 +53,6 @@ public class EnemyAI : MonoBehaviour
         agent.speed = WalkSpeed;
         isRunning = false;
         wolfAnimator.SetBool("isRunning", isRunning);
-        // wolfAnimator.Play();
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet) agent.SetDestination((walkPoint));
@@ -74,8 +78,18 @@ public class EnemyAI : MonoBehaviour
         agent.speed = RunSpeed;
         isRunning = true;
         wolfAnimator.SetBool("isRunning", isRunning);
-        if(playerInAttackRange)/*KILL*/throw new NotImplementedException();;
+        if (playerInAttackRange) OnDeath();
         agent.SetDestination(player.position);
         //transform.LookAt(player);    
-    }   
+    }
+
+
+    private void OnDeath()
+    {
+        player.Rotate(90, 0, 0, Space.World);
+        // Kan ikke kigge rundt eller bevæge sig
+        gameObject.GetComponent<EnemyAI>().enabled = false;
+        playerObj.GetComponent<PlayerMovement>().enabled = false;
+        playerObj.GetComponentInChildren<PlayerLook>().enabled = false;
+    }
 }
