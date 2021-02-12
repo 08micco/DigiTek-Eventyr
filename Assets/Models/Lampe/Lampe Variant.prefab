@@ -93,6 +93,20 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!136 &314780435501933779
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2940421988606419375}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 4.8773746
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.058493137, z: 0}
 --- !u!1001 &2598317405166836990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -146,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef54123020cc0ae488970eb8b472b3ee, type: 3}
       propertyPath: m_Name
-      value: Lampe
+      value: Lampe Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7202271454713460447, guid: ef54123020cc0ae488970eb8b472b3ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -154,6 +168,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0e44b048543881c47b43fa861b9309f2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef54123020cc0ae488970eb8b472b3ee, type: 3}
+--- !u!1 &2940421988606419375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ef54123020cc0ae488970eb8b472b3ee, type: 3}
+  m_PrefabInstance: {fileID: 2598317405166836990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2559639518580996885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef54123020cc0ae488970eb8b472b3ee, type: 3}

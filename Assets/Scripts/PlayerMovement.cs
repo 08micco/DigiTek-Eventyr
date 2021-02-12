@@ -84,9 +84,6 @@ public class PlayerMovement : MonoBehaviour
             isRunning = movementSpeed == runSpeed;
             jumpTime += Time.deltaTime;
         }
-        
-        
-        
     }
 
 
