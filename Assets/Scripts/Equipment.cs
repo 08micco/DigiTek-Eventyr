@@ -62,7 +62,7 @@ public class Equipment : MonoBehaviour
             {
                 if (isEquipped == true)
                 {
-                    RenderSettings.fogDensity = 0.6f; // 8
+                    RenderSettings.fogDensity = 0.4f;
                     isEquipped = false;
                     HideItems();
                 }
@@ -134,7 +134,7 @@ public class Equipment : MonoBehaviour
         basket.SetActive(false);
         apple.SetActive(false);
         flower.SetActive(false);
-        RenderSettings.fogDensity = 0.6f; // 8
+        RenderSettings.fogDensity = 0.4f;
     }
 
     public int GetCurrentlyEquipped()
