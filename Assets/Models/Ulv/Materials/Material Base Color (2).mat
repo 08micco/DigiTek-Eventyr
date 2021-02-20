@@ -87,6 +87,6 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ForceGlobal: {r: -0.3, g: -0, b: 0, a: 0}
     - _ForceLocal: {r: 0, g: -0.4, b: 0, a: 0}
-    - _RimColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+    - _RimColor: {r: 0, g: 0, b: 0, a: 1}
     - _Specular: {r: 0.3490565, g: 0.3330032, b: 0.28484327, a: 1}
   m_BuildTextureStacks: []
