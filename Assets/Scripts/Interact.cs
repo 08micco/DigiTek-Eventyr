@@ -67,13 +67,4 @@ public class Interact : MonoBehaviour
             if (resetTime < 0) resetTime = 1;
         }
     }
-/*
-    private void LateUpdate()
-    {
-        outlineApple.enabled = false;
-        outlineFlower.enabled = false;
-        outlineLantern.enabled = false;
-        outlineBasket.enabled = false;
-    }
-    */
 }

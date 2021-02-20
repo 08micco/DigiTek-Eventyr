@@ -8,6 +8,7 @@ TagManager:
   - Flower
   - Basket
   - Lantern
+  - Quest
   layers:
   - Default
   - TransparentFX

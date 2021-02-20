@@ -25,7 +25,6 @@ public class Inventory : MonoBehaviour
 
     private void ShowInventory()
     {
-        //print(equipment.GetCurrentlyEquipped());
         var item = equipment.GetCurrentlyEquipped();
         itemCountText.color = new Color(itemCountText.color.r, itemCountText.color.g, itemCountText.color.b, 1);
         switch (item)
@@ -77,5 +76,15 @@ public class Inventory : MonoBehaviour
             "Flower" => hasFlower,
             _ => false
         };
+    }
+
+    public int FlowerAmount()
+    {
+        return flowerCount;
+    }
+
+    public int AppleAmount()
+    {
+        return appleCount;
     }
 }
