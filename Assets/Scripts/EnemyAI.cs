@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -33,6 +35,8 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    private AudioSource growl;
+
     private void Awake()
     {
         playerObj = GameObject.Find("Player");
@@ -40,6 +44,12 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         wolfAnimator = gameObject.GetComponent<Animator>();
         if (gameObject.name == "EndEnemy") RunSpeed = 4;
+        growl = gameObject.GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        StartCoroutine(WolfGrowl());
     }
 
     private void Update()
@@ -55,6 +65,16 @@ public class EnemyAI : MonoBehaviour
         if (playerInSightRange) ChasePlayer();
     }
 
+    private IEnumerator WolfGrowl()
+    {
+        while (true)
+        {
+            var randomNum = Random.Range(3, 5);
+            yield return new WaitForSeconds(randomNum);
+            growl.Play();
+        }
+    }
+    
     private void Patrolling()
     {
         // Hvis fjenden patruljere, går den med WalkSpeed og spiller gå-animationen
