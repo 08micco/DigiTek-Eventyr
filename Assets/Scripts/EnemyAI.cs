@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Sætter ulven i to forskellige stadier.
@@ -126,5 +127,6 @@ public class EnemyAI : MonoBehaviour
         gameObject.GetComponent<EnemyAI>().enabled = false;
         playerObj.GetComponent<PlayerMovement>().enabled = false;
         playerObj.GetComponentInChildren<PlayerLook>().enabled = false;
+        SceneManager.LoadScene("MainScene");
     }
 }
