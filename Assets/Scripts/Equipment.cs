@@ -37,6 +37,9 @@ public class Equipment : MonoBehaviour
         flower = GameObject.Find("Flower");
         //animFlower = flower.GetComponent<Animator>();
         flower.SetActive(false);
+
+        //Sætter Tågen fra start
+        RenderSettings.fogDensity = 0.2f;
     }
 
     void Update()
