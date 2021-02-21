@@ -20,7 +20,6 @@ public class Equipment : MonoBehaviour
     public Inventory inventory;
     public AudioSource equipSound;
     
-    // Lantern: 1, Basket: 2
     void Start()
     {
         lantern = GameObject.Find("Lanterne");
@@ -53,7 +52,7 @@ public class Equipment : MonoBehaviour
         {
             HideItems();
             if (!inventory.HasObject("Lanterne")) return;
-            RenderSettings.fogDensity = 0.2f; // 4
+            RenderSettings.fogDensity = 0.1f; // 4
             lantern.SetActive(true);
             isEquipped = true;
             equipSound.Play();
@@ -62,7 +61,7 @@ public class Equipment : MonoBehaviour
             {
                 if (isEquipped == true)
                 {
-                    RenderSettings.fogDensity = 0.4f;
+                    RenderSettings.fogDensity = 0.2f;
                     isEquipped = false;
                     HideItems();
                 }
@@ -134,7 +133,7 @@ public class Equipment : MonoBehaviour
         basket.SetActive(false);
         apple.SetActive(false);
         flower.SetActive(false);
-        RenderSettings.fogDensity = 0.4f;
+        RenderSettings.fogDensity = 0.2f;
     }
 
     public int GetCurrentlyEquipped()

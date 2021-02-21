@@ -17,6 +17,7 @@ public class QuestFlower : MonoBehaviour
     public TMP_Text objectiveFlower;
 
     public GameObject QuestEnd;
+    public GameObject wolves;
 
     public AudioSource wolfHowl;
 
@@ -67,6 +68,7 @@ public class QuestFlower : MonoBehaviour
         {
             isActive = true;
             Destroy(collision.gameObject);
+            wolves.SetActive(true);
         }
     }
 }

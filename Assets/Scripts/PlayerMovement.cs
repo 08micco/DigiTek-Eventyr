@@ -102,12 +102,15 @@ public class PlayerMovement : MonoBehaviour
     
     private void PlayFootstep()
     {
+        // Hvis man går og ikke løber
         if (isRunning == false)
         {
+            // Ingen lyd bliver spillet hvis man står stille eller er i luften medmindre hoppe-lyd bliver spillet
             if (IsStandingStill() || !controller.isGrounded)
             {
                 if(audioSource.clip != jump) audioSource.Stop();
             }
+            // Spiller gå-lyd hvis
             else if (!audioSource.isPlaying || audioSource.clip != gravelWalk)
             {
                 audioSource.Stop();
@@ -115,12 +118,15 @@ public class PlayerMovement : MonoBehaviour
                 audioSource.Play();
             }
         }
+        // Hvis man løber
         else if (isRunning)
         {
+            // Ingen lyd bliver spillet hvis man står stille eller er i luften medmindre hoppe-lyd bliver spillet
             if (IsStandingStill() || !controller.isGrounded)
             {
                 if(audioSource.clip != jump) audioSource.Stop();
             }
+            // Spiller løbe-lyd
             else if (!audioSource.isPlaying || audioSource.clip != gravelRun)
             {
                 audioSource.Stop();
@@ -130,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    
+    // Returnere bool som bestemmer om man står stille eller ikke
     private bool IsStandingStill()
     {
         if (x != 0 || z != 0)
@@ -142,6 +148,4 @@ public class PlayerMovement : MonoBehaviour
             return standingStill = true;
         }
     }
-    
-    
 }

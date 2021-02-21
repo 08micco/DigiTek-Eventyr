@@ -1,13 +1,8 @@
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    List<string> Items = new List<string>();
-
-    public TMP_Text itemCountText;
-    
     private bool hasApple = false;
     private bool hasFlower = false;
     private bool hasBasket = false;
@@ -15,6 +10,8 @@ public class Inventory : MonoBehaviour
     
     private int appleCount;
     private int flowerCount;
+    
+    public TMP_Text itemCountText;
 
     public Equipment equipment;
 
@@ -27,6 +24,7 @@ public class Inventory : MonoBehaviour
     {
         var item = equipment.GetCurrentlyEquipped();
         itemCountText.color = new Color(itemCountText.color.r, itemCountText.color.g, itemCountText.color.b, 1);
+        // item = (1, Lanterne), (2, Kurv), (3, Æble), (4, Blomst)
         switch (item)
         {
             case 3:
@@ -46,21 +44,17 @@ public class Inventory : MonoBehaviour
         switch (item)
         {
             case "Apple":
-                Items.Add("Apples");
                 appleCount += 1;
                 hasApple = true;
                 break;
             case "Flower":
-                Items.Add("Flower");
                 hasFlower = true;
                 flowerCount += 1;
                 break;
             case "Basket":
-                Items.Add("Basket");
                 hasBasket = true;
                 break;
             case "Lantern":
-                Items.Add("Lantern");
                 hasLantern = true;
                 break;
         }
